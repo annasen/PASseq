@@ -27,7 +27,7 @@ for file in *fastq.gz; do mv "$file" "${file/sample_R1_/}"; done
 
 
 ### 2 Check the demultiplexed data
-You can perform a check in R with a nicely visualized letters
+You can perform a check in R:
 ```
 library(ShortRead)
  
