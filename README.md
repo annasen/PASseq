@@ -12,6 +12,7 @@ During the library preparation, in order to save reagents and time, the samples 
 ![R2_like-CELseq2](https://github.com/user-attachments/assets/aaac2b9e-b857-4bfe-9c9a-67c74a6536de)
 
 I used the demultiplex package in my bash_env, I listed first R2 file as that is the place where the barcodes are stored (see in the picture, 8nt UMI, 6nt cell barcode, polyT). https://demultiplex.readthedocs.io/en/latest/usage.html  
+
 Depending on the original fastq.gz size, the command can take some time. I recommend using screen command.  
 There might be quite a big file sample_R*_UNKNOWN.fastq.gz.
 ```
