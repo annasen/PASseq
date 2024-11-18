@@ -24,9 +24,43 @@ The demultiplexed R1 sequences can be copied into a new folder because we will b
 for file in *fastq.gz; do mv "$file" "${file/sample_R1_/}"; done
 ```
 
-Note: In shallow seq low RNA-quality experiments, the sorted fastq files can still contain a lot of R2 reads without the pattern -8 UMI, 6 barcode, polyT- (check with zcat sample_R2.fastq.gz | head -n 40). One can apply more stringent filtering by adding TTTTT at the end of each cell barcode sequence in the _barcode_CEL-Seq2_48.tab file_. 
 
-### 2 Mapping by seq2science
+
+### 2 Check the demultiplexed data
+You can perform a check in R with a nicely visualized letters
+```
+library(ShortRead)
+ 
+data_dir <- "../rawdata/"
+ 
+#Load the data
+sample_list <- c("sample1", "sample2", "sample3", ...)
+ 
+for (i in sample_list) {
+ 
+file_name <- paste(i, "_R2.fastq.gz", sep="")
+file_path <- file.path(data_dir, file_name)
+ 
+#Load the data
+sample_load <- readFastq(file_path)
+print(paste("loading data for", i))
+ 
+sample_sread <- sread(sample_load)
+print(paste("working on sread for", i))
+output <- head(sample_sread)
+print(output)
+}
+```
+
+or you can check the sequences in bash:
+```
+zcat sample_R2.fastq.gz | head -n 40
+```
+
+Note: In shallow seq low RNA-quality experiments, the sorted fastq files can still contain a lot of R2 reads without the pattern -8 UMI, 6 barcode, polyT-. One can apply more stringent filtering by adding TTTTT at the end of each cell barcode sequence in the _barcode_CEL-Seq2_48.tab file_. 
+
+
+### 3 Mapping by seq2science
 Link to seq2science documentation https://vanheeringen-lab.github.io/seq2science/index.html   
 
 seq2science to be run as single-end on the R1 samples.
