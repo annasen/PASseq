@@ -63,7 +63,7 @@ zcat sample_R2.fastq.gz | head -n 40
 ### 3 Mapping by seq2science
 Link to seq2science documentation https://vanheeringen-lab.github.io/seq2science/index.html   
 
-seq2science to be run as single-end on the R1 samples.
+Run seq2science as single-end on the R1 samples.
 
 Another thing to adjust in the config file might be removing the duplicates:
 ```
