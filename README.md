@@ -57,7 +57,7 @@ or you can check the sequences in bash:
 zcat sample_R2.fastq.gz | head -n 40
 ```
 
-Note: In shallow seq low RNA-quality experiments, the sorted fastq files can still contain a lot of R2 reads without the pattern -8 UMI, 6 barcode, polyT-. One can apply more stringent filtering by adding TTTTT at the end of each cell barcode sequence in the _barcode_CEL-Seq2_48.tab file_. 
+**Important note**: In shallow seq low RNA-quality experiments, the sorted fastq files can still contain a lot of R2 reads without the pattern -8 UMI, 6 barcode, polyT-. One can apply more stringent filtering by adding TTTTT at the end of each cell barcode sequence in the _barcode_CEL-Seq2_48.tab file_. 
 
 
 ### 3 Mapping by seq2science
