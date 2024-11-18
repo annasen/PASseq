@@ -28,10 +28,6 @@ Note: In shallow seq low RNA-quality experiments, the sorted fastq files can sti
 
 ### 2 Mapping by seq2science
 Link to seq2science documentation https://vanheeringen-lab.github.io/seq2science/index.html   
-Download annotation/index for mapping. Current version is 107 (2022/08/16) (https://github.com/erhard-lab/gedi/wiki/Preparing-genomes)
-```
-gedi -e IndexGenome -organism homo_sapiens -version 107 -p
-```
 
 seq2science to be run as single-end on the R1 samples.
 
