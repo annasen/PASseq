@@ -63,7 +63,7 @@ zcat sample_R2.fastq.gz | head -n 40
 ### 3 Mapping by seq2science
 Link to seq2science documentation https://vanheeringen-lab.github.io/seq2science/index.html   
 
-Run seq2science as single-end on the R1 samples.
+Run seq2science as *single-end on the R1 samples*. (Because in R2 are only UMI, cell barcode, and polyT.)
 
 Another thing to adjust in the config file might be removing the duplicates:
 ```
