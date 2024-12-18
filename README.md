@@ -63,7 +63,7 @@ zcat sample_R2.fastq.gz | head -n 40
 ### 3 Mapping by seq2science
 Link to seq2science documentation https://vanheeringen-lab.github.io/seq2science/index.html   
 
-Run seq2science as **single-end on the R1 samples**. This will be done automatically by seq2science when removing the R1/R2 from the sample name. (Reminder, R2 are only UMI, cell barcode, and polyT.) You can choose rna-seq workflow to receive also DESeq2 results.
+Run seq2science as **single-end on the R1 samples**. This will be done automatically by seq2science when removing the R1/R2 from the sample name. (Reminder, R2 are only UMI, cell barcode, and polyT.) Choose the rna-seq workflow to obtain also DESeq2 results.
 
 Another thing to adjust in the config file might be removing the duplicates:
 ```
